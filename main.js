@@ -33,3 +33,35 @@ window.addEventListener("scroll", function(){
 
     }
 })
+
+
+/* Testimonials carousel slider swiper */
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    mousewheel:true,
+    keyboard:true,
+
+  });
+
+  /* SCROLLREVEAL: Show elements when scroll */
+
+  const scrollReveal = ScrollReveal ({
+      origin:'top',
+      distance: '30px',
+      duration: 1100,
+      reset: true
+  })
+
+  scrollReveal.reveal(
+      `#home .text, #home .image
+       #about .text, #about .image,
+       #services header, #services .card,
+       #testimonials header, #testimonials .testimonials,
+       #contact .text, #contact .links
+       `,
+      { interval:200 }
+      );
